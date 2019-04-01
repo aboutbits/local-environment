@@ -6,5 +6,5 @@
 /.idea
 
 # Project
-docker-compose.yml
-traefik.toml
+/docker-compose.yml
+/traefik.toml
