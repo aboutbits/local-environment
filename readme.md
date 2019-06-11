@@ -17,6 +17,7 @@ This project uses Traefik as a reverse proxy and provides already a predefined s
     - [Reload Traefik](#reload-traefik)
     - [Stop Traefik](#stop-traefik)
 - [Documentation](#documentation)
+- [Information](#information)
 
 ## Prerequisites
 
@@ -134,3 +135,20 @@ docker-compose down
 ## Documentation
 
 Additional information about the usage of Traefik with Docker can be found [here](https://docs.traefik.io/configuration/backends/docker/). There you can find additional configuration settings and possible security concerns, that should be considered.
+
+## Information
+
+About Bits is a company based in South Tyrol, Italy. You can find more information about us on [our website](https://aboutbits.it).
+
+### Support
+
+For support, please contact [info@aboutbits.it](mailto:info@aboutbits.it).
+
+### Credits
+
+- [Alex Lanz](https://github.com/alexlanz)
+- [All Contributors](../../contributors)
+
+### License
+
+The MIT License (MIT). Please see [License File](license.md) for more information.
