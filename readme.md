@@ -43,7 +43,7 @@ The Treafik container is a small and lightweight container, that automatically d
 
 3. Paste the SSL certificate of the domain for accessing the Traefik dashboard in the folder `certificates`.
 
-    Note: if you are searching for a solution to use certificates on your local development, check out the [certificate authority tools](https://github.com/aboutbits/certificate-authority-tools) that help you create your own certificate authorities. Usinge these tools you can generate and sign your own certificates that you then can use for development.
+    Note: if you are searching for a solution to use certificates on your local development, check out [mkcert](https://mkcert.dev). It is a simple zero-config tool to make locally trusted development certificates with any names you'd like.
 
 4. Copy the file `traefik-example.toml` to `traefik.toml` and adjust the certificate paths with the files that you copied in the previous step:
 
