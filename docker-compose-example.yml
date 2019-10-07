@@ -2,7 +2,7 @@ version: "3"
 
 services:
   traefik:
-    image: traefik
+    image: traefik:1.7
     command: --api --docker
     restart: unless-stopped
     volumes:
