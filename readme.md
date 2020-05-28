@@ -45,6 +45,13 @@ The Treafik container is a small and lightweight container, that automatically d
 
     Note: if you are searching for a solution to use certificates on your local development, check out [mkcert](https://mkcert.dev). It is a simple zero-config tool to make locally trusted development certificates with any names you'd like.
 
+    The installation instructions can be found on the website. After the installation, you can create a certificate the following way:
+
+    ```bash
+    mkcert -install
+    (cd certificates && mkcert aboutbits.local "*.aboutbits.local")
+    ```
+
 4. Copy the file `traefik-example.toml` to `traefik.toml` and adjust the certificate paths with the files that you copied in the previous step:
 
     ```toml
