@@ -11,7 +11,7 @@ This project uses Traefik as a reverse proxy and provides already a predefined s
 
 - [Prerequisites](#prerequisites)
 - [Set up the Reverse Proxy](#set-up-the-reverse-proxy)
-    - [DNS entries](#dns-entries)
+    - [DNS Entries](#dns-entries)
     - [Certificates](#certificates)
     - [Running Containers](#running-containers)
 - [Set up a Service](#set-up-a-service)
@@ -26,7 +26,7 @@ This project uses Traefik as a reverse proxy and provides already a predefined s
 
 The Treafik container is a small and lightweight container, that automatically detects new services when they were started and redirects all the requests to the appropriate containers. In this section, we will guide you through the required configuration steps. Don't be afraid to keep the reverse proxy containers always running on your local machine. They don't not need much resources and they will be restarted automatically if you don't stop them explicitly.
 
-### 1. DNS entries
+### 1. DNS Entries
 
 First, you have to point the DNS names you want to use to localhost, so that they are routed correctly. Therefore, you can edit the `/etc/hosts` file and point the domain name to your local machine:
 
