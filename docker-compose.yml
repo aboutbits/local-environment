@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  dnsmasq:
+    build:
+      context: ./dnsmasq
+    restart: unless-stopped
+    ports:
+      - 53:53/udp
+    volumes:
+      - ./dnsmasq/dnsmasq.conf:/etc/dnsmasq.conf:ro
+
+  traefik:
+    image: traefik:2.3.6
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certificates:/certificates:ro
+      - ./traefik/traefik.yml:/traefik.yml:ro
+      - ./traefik/dynamic.yml:/dynamic.yml:ro
+    networks:
+      - proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.traefik.entrypoints=http,https
+      - traefik.http.routers.traefik.rule=Host(`dashboard.proxy.test`)
+      - traefik.http.routers.traefik.tls=true
+      - traefik.http.routers.traefik.service=api@internal
+
+networks:
+  proxy:
+    external: true

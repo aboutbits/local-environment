@@ -10,10 +10,12 @@ services:
       - internal
       - proxy
     labels:
-      - traefik.frontend.rule=Host:example.aboutbits.local
-      - traefik.docker.network=proxy
-      - traefik.port=80
-      - traefik.backend=example
+      - traefik.enable=true
+      - traefik.http.routers.example.entrypoints=http,https
+      - traefik.http.routers.example.rule=Host(`example.proxy.test`)
+      - traefik.http.routers.example.tls=true
+      - traefik.http.routers.example.service=example
+      - traefik.http.services.example.loadbalancer.server.port=80
   php:
     build:
       context: ./php
