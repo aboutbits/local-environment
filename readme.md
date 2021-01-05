@@ -15,7 +15,6 @@ This project uses Traefik as a reverse proxy and provides already a predefined s
     - [Certificates](#certificates)
     - [Running Containers](#running-containers)
 - [Set up a Service](#set-up-a-service)
-- [Documentation](#documentation)
 - [Information](#information)
 
 ## Prerequisites
@@ -86,10 +85,6 @@ We can easily set up a project and don't bind the port of the project to the por
 - Use an external and a internal network. Only create the containers that should be accessed from the Traefik container to the `proxy` network and connect all other services together internally by assigning them to the `internal` network.
 
 - Add the labels to the container that should be accessed through the Traefik container and configure the host, port and backend name.
-
-## Documentation
-
-Additional information about the usage of Traefik with Docker can be found [here](https://docs.traefik.io/configuration/backends/docker/). There you can find additional configuration settings and possible security concerns, that should be considered.
 
 ## Information
 
