@@ -4,7 +4,3 @@
 # IDE
 /.vscode
 /.idea
-
-# Project
-/docker-compose.yml
-/traefik.toml
